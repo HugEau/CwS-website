@@ -20,36 +20,31 @@ $main-font : 'Montserrat';
 
 html, body {
     width: 100%;
-    height: 100%;
+    max-width: 2000px;
 }
 
 // Waiting page before final site
 main {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-items: center;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    background: linear-gradient(158deg, $primary-color, $second-color);
     overflow: hidden;
+    width: 100%;
+    background: linear-gradient(158deg, $primary-color, $second-color);
     & .img {
         position: absolute;
+        display: block;
         width: 100%;
         height: 100%;
         overflow: hidden;
+        z-index: 1;
         // Different waves in corners
         &__waveRoll {
             &--1 {
                 position: absolute;
                 right: -220px;
                 top: -350px;
-            }
-            &--2 {
-                position: absolute;
-                left: -200px;
-                bottom: -300px;
-                rotate: 30deg;
             }
         }
         &__wave1 {
@@ -58,22 +53,10 @@ main {
             left: -150px;
 
         }
-        &__wave2 {
-            position: absolute;
-            bottom: -250px;
-	        right: -200px;
-
-        }
         &__wave3 {
             position: absolute;
             top: -150px;
             left: -150px;
-                
-        }
-        &__wave4 {
-            position: absolute;
-            bottom: -100px;
-            right: -150px;
                 
         }
     }
@@ -85,6 +68,8 @@ main {
         justify-content: center;
         width: 100%;
         height: 100%;
+        max-height: 100%;
+        padding: 150px;
         text-align: center;
         gap: 10px;
         &__text {
@@ -131,9 +116,10 @@ main {
                     90% {
                         top: -12rem;
                     }
-            }
-            &--descText {
+                }
+                &--descText {
                 font-size: 1em;
+                }
             }
         }
         // Social media part
@@ -165,9 +151,373 @@ main {
             }
         }
     }
+    & .fade {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        overflow: hidden;
+        width: 100%;
+        &__wave {
+            position: absolute;
+	        width: 100%;
+            bottom: 99.5%
+        }
+    }
+    // Presentation part
+    & .presentationCtn {
+        width: 100%;
+        height: 115%;
+	    position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    & .presentation {
+        background-color: #f3f4f5;
+        display: flex;
+	    flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &__content {
+            width: 70%;
+            height: 95%;
+            // About part : Image and informations about me
+            &--about {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 40px;
+                text-align: center;
+                color: lighten($primary-color, 10%);
+                & span {
+                    font-size: 20px;
+                    color: lighten($primary-color, 15%)
+                }
+                &Contents {
+                    display: flex;
+                    width: 100%;
+                    object-fit: contain;
+                    gap: 30px;
+                    font-size: 20px;
+                    text-align: left;
+                    align-items: center;
+                    & abbr {
+                        color: lighten($primary-color, 15%)
+                    }
+                    & a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                    &Picture {
+                        background: $primary-color;
+                        width: 100%;
+                        text-align: center;
+                        color: #f3f4f5;
+                        padding: 5px;
+                        font-size: 12px;
+                        border-radius: 20px;
+                        & img {
+                            width: 95%;
+                            padding: 5px;
+                            border-radius: 15px 15px 0 0;
+                        }
+                    }
+                }
+            }
+            &--interDiv {
+                margin: auto;
+                margin-top: 40px;
+                width: 40%;
+	            height: 3px;
+	            border-radius: 5px;
+	            background: linear-gradient(158deg, #174365, #a2e8d8);
+            }
+            &--skills {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 40px 0;
+                gap: 40px;
+                align-items: center;
+                justify-content: center;
+                color: lighten($primary-color, 15%);
+                &Title {
+                    font-size: 25px;
+                    text-align: center;
+                    color: $primary-color;
+                    & span {
+                        font-size: 15px;
+                        color: lighten($primary-color, 15%)
+                    }
+                }
+                &Ctn {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 25px;
+                    align-items: center;
+                    justify-content: center;
+                    &Icons {
+                        display: grid;
+                        grid-template-columns: 0.20fr 0.20fr;
+                        grid-column-gap: 25px;
+                        grid-row-gap: 25px;
+	                    align-items: center;
+	                    justify-content: center;
+                    }
+                    &Unavailable {
+                            color: gray;
+                    }
+                    &Img {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                        font-size: 14px;
+                        &Unavailable {
+                            display: none;
+                        }
+                        & i {
+                            position: relative;
+                            width: 28px;
+	                        height: 28px;
+                            top: 13px;
+                        }
+                        & p {
+                            width: 58px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            &--portfolio {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 40px 0;
+                gap: 40px;
+                align-items: center;
+                justify-content: center;
+                color: lighten($primary-color, 15%);
+                &Title {
+                    font-size: 25px;
+                    text-align: center;
+                    color: $primary-color;
+                    & span {
+                        font-size: 15px;
+                        color: lighten($primary-color, 15%)
+                    }
+                }
+                &Work {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    background-color: darken(#f3f4f5, 2%);
+                    box-shadow: 4px 3px 2px darken(#f3f4f5, 4%);
+                    padding: 15px;
+                    border-radius: 10px;
+                    &Img {
+                        width: 55%;
+                        padding: 5px;
+                        border-radius: 10px;
+                        display: flex;
+                        & img {
+                            width: 100%;
+                        }
+                    }
+                    &Text {
+                        display: flex;
+                        width: 45%;
+                        gap: 10px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        & a {
+                            padding: 10px;
+	                        background-color: lighten($primary-color, 20%);
+                            border-radius: 10px;
+                            text-decoration: none;
+                            color: #f3f4f5;
+                            text-align: center;
+                            & i {
+                                font-size: 30px;
+                            }
+                            &:hover {
+                                animation: workContactHover 1s;
+                                @keyframes workContactHover {
+                                    0% {
+                                        padding: 10px;
+                                    }
+                                    100% {
+                                        padding-left: 12px;
+                                        padding-right: 12px;
+                                        background-color: lighten($primary-color, 10%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &--contact {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 40px 0;
+                gap: 40px;
+                align-items: center;
+                justify-content: center;
+                color: lighten($primary-color, 15%);
+                &Title {
+                    font-size: 25px;
+                    text-align: center;
+                    color: $primary-color;
+                    & span {
+                        font-size: 15px;
+                        color: lighten($primary-color, 15%)
+                    }
+                }
+                &Contents {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    font-size: 20px;
+                    gap: 40px;
+                    & p {
+                        
+                    }
+                    &Links {
+                        font-size: 50px;
+                        display: flex;
+                        gap: 50px;
+                        align-items: center;
+                        justify-content: center;
+                        & i {
+                            width: 50px;
+                            height: 50px;
+                            padding: 20px;
+                            border-radius: 100px;
+                            background-color: lighten($primary-color, 20%);
+                            color: white;
+                            &:hover {
+                                animation: contactHover 1s;
+                                @keyframes contactHover {
+                                    0% {
+                                        width: 50px;
+                                    }
+                                    100% {
+                                        width: 60px;
+                                        background-color:  lighten($primary-color, 10%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
+ main .waiter__social--links a:hover {
+     animation: waiterContactHover 1s;
+     @keyframes waiterContactHover {
+         0% {
+            transform: rotate(0) scale(100%);
+         }
+         90% {
+            transform: rotate(375deg) scale(125%);
+         }
+         100% {
+            transform: rotate(360deg) scale(100%);
+         }
+     }
+ }
+
+#valerie {
+    background-color: #d5b7bc;
+}
+#github {
+    background-color: #0C0E12;
+}
+     
+//Footer part
+footer {
+    background-color: $primary-color;
+    width: 100%;
+    height: 300px;
+    color: #f3f4f5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    & .footer {
+        &__wave {
+            position: absolute;
+            top: -0.5%;
+            width: 100%;
+            height: 100px;
+            &--img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__text {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            &--nav {
+                display: flex;
+                gap: 10px;
+                & a {
+                    text-decoration: none;
+                    color: inherit;
+                    & p {
+                        font-size: 20px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 // MEDIA QUERIES
+@media (max-width: 1175px) {
+    main .presentation__content--aboutContents {
+        gap: 30px;
+        font-size: 15px;
+        flex-direction: column;
+        &Picture {
+            width: 40%;
+        }
+        & span {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    main .presentation__content--portfolioWork {
+        flex-direction: column;
+        align-items: center;
+        &Img {
+            width: 80%;
+        }
+        &Text {
+            width: 80%;
+        }
+    }
+}
 
 @media (max-width: 768px) {
     .img__waveRoll--1 {
@@ -179,16 +529,29 @@ main {
     .img__wave3 {
 		 transform: scale(60%) translate(-30%, -30px);
 	}
-    .img__waveRoll--2 {
-		 transform: scale(60%);
-	}
-	 .img__wave2 {
-		 transform: scale(60%) translate(20%);
-	}
-	 .img__wave4 {
-		 transform: scale(60%) translate(30%, 30px);
-	}
+    main .presentation__content {
+        width: 95%;
+    }
+    main .presentation__content--aboutContents {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        & p {
+            max-width: 500px;
+        }
+    }
+    main .presentation__content--skillsCtn {
+        flex-direction: column;
+        &Icons {
+            width: 180px;
+            justify-content: space-evenly;
+        }
+    }
+    main .presentation__content--portfolioWork {
+        width: 80%;
+    }
 }
+
 @media (max-width: 425px) {
 	 .img__wave1 {
 		 transform: scale(40%) translate(-30%);
@@ -199,56 +562,24 @@ main {
     main .waiter__text--mainText .roller #rolltext {
 		 font-size: 2.75em;
 	}
-    .img__waveRoll--2 {
-		 transform: scale(55%) translate(-10%);
-	}
-    .img__wave2 {
-		 transform: scale(40%) translate(25%);
-	}
-    .img__wave4 {
-		 transform: scale(40%) translate(35%, 35%);
-	}
+    main .fade__wave {
+         bottom: 99.9%;
+    }
 }
-@media (max-width: 370px) {
+ @media (max-width: 370px) {
 	 .img__wave1 {
 		 transform: scale(20%) translate(-100%, 30%);
 	}
 	 .img__wave3 {
 		 transform: scale(25%) translate(-80%, -55%);
 	}
-    .img__waveRoll--2 {
-		 transform: scale(50%);
-	}
-    .img__wave2 {
-		 transform: scale(35%) translate(25%);
-	}
-    .img__wave4 {
-		 transform: scale(35%) translate(35%, 35%);
-	}
-    .img__waveRoll--2 {
-		 transform: scale(50%);
-	}
-    .img__wave2 {
-		 transform: scale(35%) translate(25%, 20%);
-	}
-    .img__wave4 {
-		 transform: scale(35%) translate(45%, 65%);
-	}
 }
+
 @media (max-width: 300px) {
 	 .img__wave1 {
 		 transform: scale(20%) translate(-100%, 20%);
 	}
 	 .img__wave3 {
 		 transform: scale(25%) translate(-80%, -70%);
-	}
-    .img__waveRoll--2 {
-		 transform: scale(50%);
-	}
-    .img__wave2 {
-		 transform: scale(25%) translate(55%, 10%);
-	}
-    .img__wave4 {
-		 transform: scale(25%) translate(80%, 80%);
 	}
 }
