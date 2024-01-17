@@ -427,6 +427,7 @@
 	 flex-direction: column;
 	 align-items: center;
 	 justify-content: flex-end;
+	 text-align: center;
 }
  footer .footer__wave {
 	 position: absolute;
@@ -456,7 +457,7 @@
 }
  footer .footer__text--nav a p {
 	 font-size: 20px;
-     text-decoration: underline;
+	 text-decoration: underline;
 }
  @media (max-width: 1175px) {
 	 main .presentation__content--aboutContents {
@@ -545,3 +546,4 @@
 		 transform: scale(25%) translate(-80%, -70%);
 	}
 }
+ 
