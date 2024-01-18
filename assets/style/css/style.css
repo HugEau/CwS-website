@@ -461,6 +461,9 @@
 	 font-size: 20px;
 	 text-decoration: underline;
 }
+ footer .footer__text a {
+	 color: #f3f4f5;
+}
  @media (min-width: 1300px) {
 	 main .fade__wave {
 		 bottom: 99.7%;
