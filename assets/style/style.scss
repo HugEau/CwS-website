@@ -346,12 +346,12 @@ main {
                                 font-size: 30px;
                             }
                             &:hover {
-                                animation: workContactHover 0.5s;
+                                animation: workContactHover 4s;
                                 @keyframes workContactHover {
                                     0% {
                                         padding: 10px;
                                     }
-                                    100% {
+                                    20% {
                                         padding-left: 12px;
                                         padding-right: 12px;
                                         background-color: $primary-color;
