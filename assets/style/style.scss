@@ -20,7 +20,6 @@ $main-font : 'Montserrat';
 
 html, body {
     width: 100%;
-    max-width: 2000px;
 }
 
 // Waiting page before final site
@@ -221,7 +220,7 @@ main {
                         border-radius: 20px;
                         & img {
                             width: 95%;
-                            padding: 5px;
+                            padding: 7px;
                             border-radius: 15px 15px 0 0;
                         }
                     }
@@ -338,7 +337,7 @@ main {
                         justify-content: space-between;
                         & a {
                             padding: 10px;
-	                        background-color: lighten($primary-color, 20%);
+	                        background-color: lighten($primary-color, 10%);
                             border-radius: 10px;
                             text-decoration: none;
                             color: #f3f4f5;
@@ -347,7 +346,7 @@ main {
                                 font-size: 30px;
                             }
                             &:hover {
-                                animation: workContactHover 1s;
+                                animation: workContactHover 0.5s;
                                 @keyframes workContactHover {
                                     0% {
                                         padding: 10px;
@@ -355,7 +354,7 @@ main {
                                     100% {
                                         padding-left: 12px;
                                         padding-right: 12px;
-                                        background-color: lighten($primary-color, 10%);
+                                        background-color: $primary-color;
                                     }
                                 }
                             }
@@ -377,7 +376,7 @@ main {
                     text-align: center;
                     color: $primary-color;
                     & span {
-                        font-size: 15px;
+                        font-size: 17px;
                         color: lighten($primary-color, 15%)
                     }
                 }
@@ -401,17 +400,20 @@ main {
                             height: 50px;
                             padding: 20px;
                             border-radius: 100px;
-                            background-color: lighten($primary-color, 20%);
+                            background-color: lighten($primary-color, 10%);
                             color: white;
                             &:hover {
                                 animation: contactHover 1s;
                                 @keyframes contactHover {
                                     0% {
-                                        width: 50px;
+                                        transform: rotate(0) scale(100%);
+                                    }
+                                    90% {
+                                        transform: rotate(375deg) scale(125%);
                                     }
                                     100% {
-                                        width: 60px;
-                                        background-color:  lighten($primary-color, 10%);
+                                        transform: rotate(360deg) scale(100%);
+                                        background: #174365;
                                     }
                                 }
                             }
@@ -491,7 +493,11 @@ footer {
     }
 }
 
-
+@media (min-width: 1300px) {
+    main .fade__wave {
+         bottom: 99.7%;
+    }
+}
 // MEDIA QUERIES
 @media (max-width: 1175px) {
     main .presentation__content--aboutContents {
@@ -504,6 +510,9 @@ footer {
         & span {
             font-size: 15px;
         }
+    }
+    main .fade__wave {
+        bottom: 99.9%;
     }
 }
 
@@ -563,9 +572,6 @@ footer {
     main .waiter__text--mainText .roller #rolltext {
 		 font-size: 2.75em;
 	}
-    main .fade__wave {
-         bottom: 99.9%;
-    }
 }
  @media (max-width: 370px) {
 	 .img__wave1 {

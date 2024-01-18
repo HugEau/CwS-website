@@ -9,7 +9,6 @@
 }
  html, body {
 	 width: 100%;
-	 max-width: 2000px;
 }
  main {
 	 display: flex;
@@ -80,7 +79,7 @@
  main .waiter__text--mainText .roller #rolltext {
 	 position: absolute;
 	 top: 0;
-	 animation: slide 15s 1s infinite;
+	 animation: slide 10s infinite;
 	 font-size: 4em;
 	 text-shadow: 4px 3px 2px rgba(115, 153, 165, 0.7);
 	 color: white;
@@ -205,7 +204,7 @@
 }
  main .presentation__content--aboutContentsPicture img {
 	 width: 95%;
-	 padding: 5px;
+	 padding: 7px;
 	 border-radius: 15px 15px 0 0;
 }
  main .presentation__content--interDiv {
@@ -322,7 +321,7 @@
 }
  main .presentation__content--portfolioWorkText a {
 	 padding: 10px;
-	 background-color: #2a7ab8;
+	 background-color: #205f8f;
 	 border-radius: 10px;
 	 text-decoration: none;
 	 color: #f3f4f5;
@@ -332,7 +331,7 @@
 	 font-size: 30px;
 }
  main .presentation__content--portfolioWorkText a:hover {
-	 animation: workContactHover 1s;
+	 animation: workContactHover 0.5s;
 }
  @keyframes workContactHover {
 	 0% {
@@ -341,7 +340,7 @@
 	 100% {
 		 padding-left: 12px;
 		 padding-right: 12px;
-		 background-color: #205f8f;
+		 background-color: #174365;
 	}
 }
  main .presentation__content--contact {
@@ -360,7 +359,7 @@
 	 color: #174365;
 }
  main .presentation__content--contactTitle span {
-	 font-size: 15px;
+	 font-size: 17px;
 	 color: #256ca3;
 }
  main .presentation__content--contactContents {
@@ -382,7 +381,7 @@
 	 height: 50px;
 	 padding: 20px;
 	 border-radius: 100px;
-	 background-color: #2a7ab8;
+	 background-color: #205f8f;
 	 color: white;
 }
  main .presentation__content--contactContentsLinks i:hover {
@@ -390,11 +389,14 @@
 }
  @keyframes contactHover {
 	 0% {
-		 width: 50px;
+		 transform: rotate(0) scale(100%);
+	}
+	 90% {
+		 transform: rotate(375deg) scale(125%);
 	}
 	 100% {
-		 width: 60px;
-		 background-color: #205f8f;
+		 transform: rotate(360deg) scale(100%);
+		 background: #174365;
 	}
 }
  main .waiter__social--links a:hover {
@@ -459,6 +461,11 @@
 	 font-size: 20px;
 	 text-decoration: underline;
 }
+ @media (min-width: 1300px) {
+	 main .fade__wave {
+		 bottom: 99.7%;
+	}
+}
  @media (max-width: 1175px) {
 	 main .presentation__content--aboutContents {
 		 gap: 30px;
@@ -470,6 +477,9 @@
 	}
 	 main .presentation__content--aboutContents span {
 		 font-size: 15px;
+	}
+	 main .fade__wave {
+		 bottom: 99.9%;
 	}
 }
  @media (max-width: 1024px) {
@@ -525,9 +535,6 @@
 	}
 	 main .waiter__text--mainText .roller #rolltext {
 		 font-size: 2.75em;
-	}
-	 main .fade__wave {
-		 bottom: 99.9%;
 	}
 }
  @media (max-width: 370px) {
