@@ -331,16 +331,16 @@
 	 font-size: 30px;
 }
  main .presentation__content--portfolioWorkText a:hover {
-	 animation: workContactHover 4s;
+	 animation: workContactHover 0.5s;
 }
  @keyframes workContactHover {
 	 0% {
 		 padding: 10px;
 	}
-	 20% {
+	 50% {
 		 padding-left: 12px;
 		 padding-right: 12px;
-		 background-color: #174365;
+		 background-color: #2f88cd;
 	}
 }
  main .presentation__content--contact {

@@ -12,6 +12,7 @@ $second-color : #a2e8d8;
 $special-font : 'Brittany';
 $main-font : 'Montserrat';
 
+// Initializing code
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +23,7 @@ html, body {
     width: 100%;
 }
 
-// Waiting page before final site
+// Reused waiting site to provide portfolio V1
 main {
     display: flex;
     flex-direction: column;
@@ -31,6 +32,7 @@ main {
     overflow: hidden;
     width: 100%;
     background: linear-gradient(158deg, $primary-color, $second-color);
+    // Waves container
     & .img {
         position: absolute;
         display: block;
@@ -38,7 +40,7 @@ main {
         height: 100%;
         overflow: hidden;
         z-index: 1;
-        // Different waves in corners
+        // Different waves in top corners
         &__waveRoll {
             &--1 {
                 position: absolute;
@@ -59,7 +61,7 @@ main {
                 
         }
     }
-    // Content container
+    // Top landing container
     & .waiter {
         display: flex;
         flex-direction: column;
@@ -74,6 +76,7 @@ main {
         &__text {
             font-family: inherit;
             color: white;
+            // Logo style
             &--logo {
                 font-family: $special-font;
                 font-size: 5em;
@@ -90,6 +93,7 @@ main {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    // Text roller with animation
                     & #rolltext {
                         position: absolute;
                         top: 0;
@@ -150,6 +154,7 @@ main {
             }
         }
     }
+    // Wave between top landing and presentation part
     & .fade {
         display: flex;
         flex-direction: column;
@@ -226,6 +231,7 @@ main {
                     }
                 }
             }
+            // Div used to make bar between different parts
             &--interDiv {
                 margin: auto;
                 margin-top: 40px;
@@ -234,6 +240,7 @@ main {
 	            border-radius: 5px;
 	            background: linear-gradient(158deg, #174365, #a2e8d8);
             }
+            // Skills part : displaying knowlegde with Font Awesome icons
             &--skills {
                 display: flex;
                 flex-direction: column;
@@ -266,6 +273,7 @@ main {
 	                    align-items: center;
 	                    justify-content: center;
                     }
+                    // If skill isn't fully acquired yet
                     &Unavailable {
                             color: gray;
                     }
@@ -276,6 +284,7 @@ main {
                         justify-content: center;
                         gap: 5px;
                         font-size: 14px;
+                        //Desactivaring unavailable feature
                         &Unavailable {
                             display: none;
                         }
@@ -292,6 +301,7 @@ main {
                     }
                 }
             }
+            // Portfolio part : exposing my works
             &--portfolio {
                 display: flex;
                 flex-direction: column;
@@ -310,6 +320,7 @@ main {
                         color: lighten($primary-color, 15%)
                     }
                 }
+                // Class template for different works
                 &Work {
                     width: 100%;
                     display: flex;
@@ -346,15 +357,15 @@ main {
                                 font-size: 30px;
                             }
                             &:hover {
-                                animation: workContactHover 4s;
+                                animation: workContactHover 0.5s;
                                 @keyframes workContactHover {
                                     0% {
                                         padding: 10px;
                                     }
-                                    20% {
+                                    50% {
                                         padding-left: 12px;
                                         padding-right: 12px;
-                                        background-color: $primary-color;
+                                        background-color: lighten($primary-color, 25%);
                                     }
                                 }
                             }
@@ -362,6 +373,7 @@ main {
                     }
                 }
             }
+            // Contact Part
             &--contact {
                 display: flex;
                 flex-direction: column;
@@ -425,6 +437,8 @@ main {
     }
 }
 
+// Animation feature added after a test with css only
+
  main .waiter__social--links a:hover {
      animation: waiterContactHover 1s;
      @keyframes waiterContactHover {
@@ -439,6 +453,8 @@ main {
          }
      }
  }
+
+// Works picture's backgrounds
 
 #valerie {
     background-color: #d5b7bc;
@@ -460,6 +476,7 @@ footer {
     justify-content: flex-end;
     text-align: center;
     & .footer {
+        // Fade wave between content and footer
         &__wave {
             position: absolute;
             top: -0.5%;
@@ -496,12 +513,14 @@ footer {
     }
 }
 
+// MEDIA QUERIES
+
 @media (min-width: 1300px) {
     main .fade__wave {
          bottom: 99.7%;
     }
 }
-// MEDIA QUERIES
+
 @media (max-width: 1175px) {
     main .presentation__content--aboutContents {
         gap: 30px;
