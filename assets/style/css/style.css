@@ -50,12 +50,12 @@
 	 color: #f3f4f5;
 	 text-align: center;
 }
- header .navbar__element:hover {
+ header .navbar__element:hover, header .navbar__element .navbar__element:active {
 	 color: #133854;
 	 background-color: #f3f4f5;
 	 border-radius: 50px;
 }
- header .navbar__element:hover .navbar__element--name {
+ header .navbar__element:hover .navbar__element--name, header .navbar__element .navbar__element:active .navbar__element--name {
 	 display: block;
 	 top: -40px;
 }
