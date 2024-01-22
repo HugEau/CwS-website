@@ -729,8 +729,10 @@ footer {
         width: 75%;
     }
     
-    header .navbar__element--name:hover {
-        display: none;
+    header .navbar__element:hover {
+        & header .navbar__element--name {
+            display: none;
+        }
     }
     
     .img__waveRoll--1 {
