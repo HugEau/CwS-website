@@ -23,6 +23,37 @@ html, body {
     width: 100%;
 }
 
+// Header used for bottom side-bar
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    width: 100%;
+    & .navbar {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 15px;
+        bottom: 1em;
+        width: 45%;
+        height: 40px;
+        background-color: darken($primary-color, 4%);
+        box-shadow: 4px 3px 2px darken($primary-color, 7%);
+        border-radius: 15px;
+        &__element {
+            color: #f3f4f5;
+            & a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
 // Reused waiting site to provide portfolio V1
 main {
     display: flex;
@@ -76,6 +107,7 @@ main {
         &__text {
             font-family: inherit;
             color: white;
+            max-width: 100%;
             // Logo style
             &--logo {
                 font-family: $special-font;
@@ -84,6 +116,7 @@ main {
             }
             &--mainText {
                 width: 400px;
+                max-width: 100%;
                 & .roller{
                     height: 4.125rem;
                     line-height: 4rem;
@@ -489,6 +522,7 @@ footer {
         }
         &__text {
             padding: 20px;
+            padding-bottom: 62px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -552,6 +586,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header .navbar {
+        width: 75%;
+    }
     .img__waveRoll--1 {
 		 transform: scale(60%);
 	}
@@ -585,14 +622,20 @@ footer {
 }
 
 @media (max-width: 425px) {
-	 .img__wave1 {
+    .img__wave1 {
 		 transform: scale(40%) translate(-30%);
 	}
-	 .img__wave3 {
+    .img__wave3 {
 		 transform: scale(45%) translate(-40%, -20%);
 	}
     main .waiter__text--mainText .roller #rolltext {
 		 font-size: 2.75em;
+	}
+    footer .footer__text {
+		 font-size: 12px;
+     }
+    footer .footer__text--nav a p {
+		 font-size: 12px;
 	}
 }
  @media (max-width: 370px) {
