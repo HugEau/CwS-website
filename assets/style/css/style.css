@@ -40,10 +40,23 @@
 	 width: 30px;
 	 height: 30px;
 }
+ header .navbar__element--name {
+	 display: none;
+	 font-size: 10px;
+	 background-color: #133854;
+	 padding: 10px;
+	 border-radius: 20px;
+	 position: absolute;
+	 color: #f3f4f5;
+}
  header .navbar__element:hover {
 	 color: #133854;
 	 background-color: #f3f4f5;
 	 border-radius: 50px;
+}
+ header .navbar__element:hover .navbar__element--name {
+	 display: block;
+	 top: -40px;
 }
  header .navbar__element a {
 	 color: inherit;

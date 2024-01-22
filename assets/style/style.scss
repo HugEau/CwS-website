@@ -52,11 +52,24 @@ header {
             color: #f3f4f5;
             width: 30px;
             height: 30px;
+            &--name {
+                display: none;
+                font-size: 10px;
+                background-color: darken($primary-color, 4%);
+                padding: 10px;
+                border-radius: 20px;
+                position: absolute;
+                color: #f3f4f5;
+            }
             &:hover {
-                    color: darken($primary-color, 4%);
-                    background-color: #f3f4f5;
-                    border-radius: 50px;
+                color: darken($primary-color, 4%);
+                background-color: #f3f4f5;
+                border-radius: 50px;
+                & .navbar__element--name {
+                    display: block;
+                    top: -40px;
                 }
+            }
             & a {
                 color: inherit;
                 text-decoration: none;
