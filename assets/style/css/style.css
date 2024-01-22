@@ -404,7 +404,7 @@
 }
  main .presentation__content--guideContent {
 	 display: flex;
-	 flex-direction: row;
+	 flex-direction: column;
 	 align-items: center;
 	 justify-content: center;
 	 width: 100%;
@@ -414,15 +414,15 @@
 	 display: flex;
 	 flex-direction: column;
 	 justify-content: flex-start;
+	 padding-right: 0px;
+	 padding-bottom: 30px;
 	 width: 50%;
-	 border-right: 1px solid #256ca3;
-	 padding-right: 20px;
 }
  main .presentation__content--guideContentLeftCtn {
 	 display: flex;
 	 flex-direction: row;
 	 justify-content: flex-start;
-	 gap: 20px;
+	 gap: 10px;
 }
  main .presentation__content--guideContentLeftCtnLine {
 	 display: flex;
@@ -434,34 +434,49 @@
 	 color: #256ca3;
 }
  main .presentation__content--guideContentLeftCtnLineDots {
-	 border-left: 5px dotted #256ca3;
-	 height: 70px;
+	 border-left: 3px solid #256ca3;
+	 height: 80px;
 	 margin-left: 8px;
 }
  main .presentation__content--guideContentLeftCtnText {
-	 padding-top: 20px;
-	 font-size: 20px;
 	 color: #256ca3;
 }
- main .presentation__content--guideContentLeftCtnText span {
+ main .presentation__content--guideContentLeftCtnTextP {
+	 padding-top: 16px;
+	 padding-left: 40px;
+	 font-size: 25px;
+}
+ main .presentation__content--guideContentLeftCtnTextSpan {
 	 font-size: 14px;
+	 padding-left: 3px;
+}
+ main .presentation__content--guideContentLeftCtnText1 {
+	 font-size: 25px;
+	 color: #256ca3;
+	 padding-top: 16px;
+}
+ main .presentation__content--guideContentLeftCtnText1Span {
+	 font-size: 14px;
+	 padding-left: 10px;
 }
  main .presentation__content--guideContentRight {
 	 display: flex;
 	 flex-direction: column;
 	 justify-content: flex-start;
-	 width: 50%;
+	 width: 80%;
 	 color: #256ca3;
+	 border-top: 0.5px solid #256ca3;
+	 padding-top: 30px;
 }
  main .presentation__content--guideContentRightTitle {
-	 font-size: 40px;
+	 font-size: 30px;
 }
  main .presentation__content--guideContentRightSubtitle {
-	 font-size: 25px;
+	 font-size: 20px;
 }
  main .presentation__content--guideContentRightText {
 	 font-size: 16px;
-	 padding-left: 20px;
+	 padding-left: 15px;
 }
  main .presentation__content--contact {
 	 display: flex;
@@ -539,6 +554,9 @@
  #github {
 	 background-color: #0c0e12;
 }
+ #GuideTextLeft1 {
+	 padding-left: 50px;
+}
  footer {
 	 background-color: #174365;
 	 width: 100%;
@@ -612,16 +630,6 @@
 		 gap: 30px;
 		 flex-direction: column;
 	}
-	 main .presentation__content--guideContentLeft {
-		 border: none;
-		 border-bottom: 1px solid #256ca3;
-		 padding-right: 0px;
-		 padding-bottom: 30px;
-		 width: 80%;
-	}
-	 main .presentation__content--guideContentRight {
-		 width: 80%;
-	}
 }
  @media (max-width: 1024px) {
 	 main .presentation__content--portfolioWork {
@@ -632,6 +640,9 @@
 		 width: 80%;
 	}
 	 main .presentation__content--portfolioWorkText {
+		 width: 80%;
+	}
+	 main .presentation__content--guideContentLeft {
 		 width: 80%;
 	}
 }
@@ -669,6 +680,12 @@
 	 main .presentation__content--portfolioWork {
 		 width: 80%;
 	}
+	 #GuideTextLeft1 {
+		 padding-left: 10px;
+	}
+	 main .presentation__content--guideContentLeftCtnTextP {
+		 padding-left: 3px;
+	}
 }
  @media (max-width: 425px) {
 	 header .navbar {
@@ -689,13 +706,25 @@
 	 main .presentation__content--guideContentRightCtn {
 		 width: 90%;
 	}
-	 main .presentation__content--guideContentLeftCtnText {
+	 main .presentation__content--guideContentLeftCtnText1 {
 		 font-size: 16px;
 		 padding-top: 10px;
 		 text-align: center;
 	}
-	 main .presentation__content--guideContentLeftCtnText span {
+	 main .presentation__content--guideContentLeftCtnText {
+		 text-align: center;
+	}
+	 main .presentation__content--guideContentLeftCtnTextP {
+		 font-size: 18px;
+		 padding-top: 10px;
+	}
+	 main .presentation__content--guideContentLeftCtnTextSpan {
 		 font-size: 14px;
+		 text-align: center;
+	}
+	 main .presentation__content--guideContentLeftCtnText1Span {
+		 font-size: 14px;
+		 text-align: center;
 	}
 	 main .presentation__content--guideContentRightTitle {
 		 font-size: 30px;
