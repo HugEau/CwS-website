@@ -62,7 +62,7 @@ header {
                 color: #f3f4f5;
                 text-align: center;
             }
-            &:hover, .navbar__element:active {
+            &:hover {
                 color: darken($primary-color, 4%);
                 background-color: #f3f4f5;
                 border-radius: 50px;
@@ -76,6 +76,14 @@ header {
                 text-decoration: none;
             }
         }
+    }
+}
+
+// Media Query to disable hover on navbar (doesn't work => Have to fix that)
+
+@media (hover: none) {
+    header .navbar__element--name {
+        display: none;
     }
 }
 
