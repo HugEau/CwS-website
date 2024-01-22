@@ -60,6 +60,7 @@ header {
                 border-radius: 20px;
                 position: absolute;
                 color: #f3f4f5;
+                text-align: center;
             }
             &:hover {
                 color: darken($primary-color, 4%);

@@ -48,6 +48,7 @@
 	 border-radius: 20px;
 	 position: absolute;
 	 color: #f3f4f5;
+	 text-align: center;
 }
  header .navbar__element:hover {
 	 color: #133854;
