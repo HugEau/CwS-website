@@ -46,7 +46,17 @@ header {
         border-radius: 15px;
         opacity: 0.96;
         &__element {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #f3f4f5;
+            width: 30px;
+            height: 30px;
+            &:hover {
+                    color: darken($primary-color, 4%);
+                    background-color: #f3f4f5;
+                    border-radius: 50px;
+                }
             & a {
                 color: inherit;
                 text-decoration: none;
@@ -407,6 +417,89 @@ main {
                     }
                 }
             }
+            
+            // Guide part
+            &--guide {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                gap: 40px;
+                padding: 40px 0;
+                &Title {
+                    font-size: 25px;
+                    text-align: center;
+                    color: $primary-color;
+                    & span {
+                        font-size: 15px;
+                        color: lighten($primary-color, 15%)
+                    }
+                }
+                &Content {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    gap: 20px;
+                    &Left {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        width: 50%;
+                        border-right: 1px solid lighten($primary-color, 15%);
+                        padding-right: 20px;
+                        &Ctn {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            gap: 20px;
+                            &Line {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                &Number {
+                                    font-size: 40px;
+                                    color: lighten($primary-color, 15%);
+                                }
+                                &Dots {
+                                    border-left: 5px dotted lighten($primary-color, 15%);
+                                    height: 70px;
+                                    margin-left: 8px;
+                                }
+                            }
+                            &Text {
+                                padding-top: 20px;
+                                font-size: 20px;
+                                color: lighten($primary-color, 15%);
+                                & span {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    &Right {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        width: 50%;
+                        color: lighten($primary-color, 15%);
+                        &Title {
+                            font-size: 40px;
+                        }
+                        &Subtitle {
+                            font-size: 25px;
+                        }
+                        &Text {
+                            font-size: 16px;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+            
+            
             // Contact Part
             &--contact {
                 display: flex;
@@ -571,6 +664,23 @@ footer {
     main .fade__wave {
         bottom: 99.9%;
     }
+    main .presentation__content--guide {
+         padding: 30px 0
+    }
+    main .presentation__content--guideContent {
+        gap: 30px;
+        flex-direction: column;
+    }
+    main .presentation__content--guideContentLeft {
+        border: none;
+        border-bottom: 1px solid lighten($primary-color, 15%);
+        padding-right: 0px;
+        padding-bottom: 30px;
+        width: 80%;
+    }
+    main .presentation__content--guideContentRight {
+        width: 80%;
+     }
 }
 
 @media (max-width: 1024px) {
@@ -623,6 +733,10 @@ footer {
 }
 
 @media (max-width: 425px) {
+    header .navbar {
+        width: 85%;
+    }
+    
     .img__wave1 {
 		 transform: scale(40%) translate(-30%);
 	}
@@ -632,6 +746,35 @@ footer {
     main .waiter__text--mainText .roller #rolltext {
 		 font-size: 2.75em;
 	}
+    main .presentation__content--guideContentLeftCtn {
+        width: 90%
+    }
+    main .presentation__content--guideContentRightCtn {
+        width: 90%
+    }
+    main .presentation__content--guideContentLeftCtnText {
+        font-size: 16px;
+        padding-top: 10px;
+        text-align: center;
+    }
+    
+    main .presentation__content--guideContentLeftCtnText span {
+        font-size: 14px;
+    }
+    
+    main .presentation__content--guideContentRightTitle {
+        font-size: 30px;
+    }
+    
+    main .presentation__content--guideContentRightSubtitle {
+        font-size: 20px;
+    }
+    
+    main .presentation__content--guideContentRightText {
+        font-size: 14px;
+    }
+    
+    
     footer .footer__text {
 		 font-size: 12px;
      }

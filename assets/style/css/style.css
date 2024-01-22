@@ -30,10 +30,20 @@
 	 background-color: #133854;
 	 box-shadow: 4px 3px 2px #103048;
 	 border-radius: 15px;
-     opacity: 0.96;
+	 opacity: 0.96;
 }
  header .navbar__element {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
 	 color: #f3f4f5;
+	 width: 30px;
+	 height: 30px;
+}
+ header .navbar__element:hover {
+	 color: #133854;
+	 background-color: #f3f4f5;
+	 border-radius: 50px;
 }
  header .navbar__element a {
 	 color: inherit;
@@ -374,6 +384,85 @@
 		 background-color: #2f88cd;
 	}
 }
+ main .presentation__content--guide {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 width: 100%;
+	 gap: 40px;
+	 padding: 40px 0;
+}
+ main .presentation__content--guideTitle {
+	 font-size: 25px;
+	 text-align: center;
+	 color: #174365;
+}
+ main .presentation__content--guideTitle span {
+	 font-size: 15px;
+	 color: #256ca3;
+}
+ main .presentation__content--guideContent {
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 justify-content: center;
+	 width: 100%;
+	 gap: 20px;
+}
+ main .presentation__content--guideContentLeft {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: flex-start;
+	 width: 50%;
+	 border-right: 1px solid #256ca3;
+	 padding-right: 20px;
+}
+ main .presentation__content--guideContentLeftCtn {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: flex-start;
+	 gap: 20px;
+}
+ main .presentation__content--guideContentLeftCtnLine {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: flex-start;
+}
+ main .presentation__content--guideContentLeftCtnLineNumber {
+	 font-size: 40px;
+	 color: #256ca3;
+}
+ main .presentation__content--guideContentLeftCtnLineDots {
+	 border-left: 5px dotted #256ca3;
+	 height: 70px;
+	 margin-left: 8px;
+}
+ main .presentation__content--guideContentLeftCtnText {
+	 padding-top: 20px;
+	 font-size: 20px;
+	 color: #256ca3;
+}
+ main .presentation__content--guideContentLeftCtnText span {
+	 font-size: 14px;
+}
+ main .presentation__content--guideContentRight {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: flex-start;
+	 width: 50%;
+	 color: #256ca3;
+}
+ main .presentation__content--guideContentRightTitle {
+	 font-size: 40px;
+}
+ main .presentation__content--guideContentRightSubtitle {
+	 font-size: 25px;
+}
+ main .presentation__content--guideContentRightText {
+	 font-size: 16px;
+	 padding-left: 20px;
+}
  main .presentation__content--contact {
 	 display: flex;
 	 flex-direction: column;
@@ -516,6 +605,23 @@
 	 main .fade__wave {
 		 bottom: 99.9%;
 	}
+	 main .presentation__content--guide {
+		 padding: 30px 0;
+	}
+	 main .presentation__content--guideContent {
+		 gap: 30px;
+		 flex-direction: column;
+	}
+	 main .presentation__content--guideContentLeft {
+		 border: none;
+		 border-bottom: 1px solid #256ca3;
+		 padding-right: 0px;
+		 padding-bottom: 30px;
+		 width: 80%;
+	}
+	 main .presentation__content--guideContentRight {
+		 width: 80%;
+	}
 }
  @media (max-width: 1024px) {
 	 main .presentation__content--portfolioWork {
@@ -565,6 +671,9 @@
 	}
 }
  @media (max-width: 425px) {
+	 header .navbar {
+		 width: 85%;
+	}
 	 .img__wave1 {
 		 transform: scale(40%) translate(-30%);
 	}
@@ -573,6 +682,29 @@
 	}
 	 main .waiter__text--mainText .roller #rolltext {
 		 font-size: 2.75em;
+	}
+	 main .presentation__content--guideContentLeftCtn {
+		 width: 90%;
+	}
+	 main .presentation__content--guideContentRightCtn {
+		 width: 90%;
+	}
+	 main .presentation__content--guideContentLeftCtnText {
+		 font-size: 16px;
+		 padding-top: 10px;
+		 text-align: center;
+	}
+	 main .presentation__content--guideContentLeftCtnText span {
+		 font-size: 14px;
+	}
+	 main .presentation__content--guideContentRightTitle {
+		 font-size: 30px;
+	}
+	 main .presentation__content--guideContentRightSubtitle {
+		 font-size: 20px;
+	}
+	 main .presentation__content--guideContentRightText {
+		 font-size: 14px;
 	}
 	 footer .footer__text {
 		 font-size: 12px;
