@@ -30,6 +30,7 @@
 	 background-color: #133854;
 	 box-shadow: 4px 3px 2px #103048;
 	 border-radius: 15px;
+     opacity: 0.96;
 }
  header .navbar__element {
 	 color: #f3f4f5;
