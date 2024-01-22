@@ -79,14 +79,6 @@ header {
     }
 }
 
-// Media Query to disable hover on navbar (doesn't work => Have to fix that)
-
-@media (hover: none) {
-    header .navbar__element--name {
-        display: none;
-    }
-}
-
 // Reused waiting site to provide portfolio V1
 main {
     display: flex;
@@ -736,6 +728,11 @@ footer {
     header .navbar {
         width: 75%;
     }
+    
+    header .navbar__element--name:hover {
+        display: none;
+    }
+    
     .img__waveRoll--1 {
 		 transform: scale(60%);
 	}

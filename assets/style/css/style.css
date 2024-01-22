@@ -63,11 +63,6 @@
 	 color: inherit;
 	 text-decoration: none;
 }
- @media (hover: none) {
-	 header .navbar__element--name {
-		 display: none;
-	}
-}
  main {
 	 display: flex;
 	 flex-direction: column;
@@ -668,6 +663,9 @@
  @media (max-width: 768px) {
 	 header .navbar {
 		 width: 75%;
+	}
+	 header .navbar__element--name:hover {
+		 display: none;
 	}
 	 .img__waveRoll--1 {
 		 transform: scale(60%);
