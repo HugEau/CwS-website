@@ -669,9 +669,71 @@ footer {
                     }
                 }
             }
+            &--btnLegals {
+                background-color: inherit;
+                border: none;
+                color: inherit;
+                font-size: inherit;
+                text-decoration: underline;
+                cursor: pointer;
+            }
             & a {
                 color: #f3f4f5;
             }
+        }
+        &__legals {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            &--modal {
+                width: 80%;
+                height: 80%;
+                position: relative;
+                background: linear-gradient(158deg, $primary-color, $second-color);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 20px;
+                &Close {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    width: 90%;
+                    height: 5%;
+                    &Btn {
+                        font-size: 20px;
+                        background: none;
+                        border: none;
+                        color: #f3f4f5;
+                        cursor: pointer;
+                    }
+                }
+                &TxtCtn {
+                    width: 90%;
+                    height: 90%;
+                    overflow: scroll;
+                    background-color: #f3f4f5;
+                    box-shadow: 2px 3px 2px darken(#f3f4f5, 4%);
+                    border-radius: 20px;
+                    & p {
+                        margin: 3px;
+                        color: black;
+                        font-size: 12px;
+                        & span {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }
