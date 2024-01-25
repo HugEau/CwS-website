@@ -748,6 +748,9 @@
 	 main .presentation__content--aboutContents p {
 		 max-width: 500px;
 	}
+     main .presentation__content--aboutContentsPicture img {
+         padding: 0;
+     }
 	 main .presentation__content--skillsCtn {
 		 flex-direction: column;
 	}

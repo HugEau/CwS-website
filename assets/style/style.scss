@@ -816,6 +816,11 @@ footer {
         & p {
             max-width: 500px;
         }
+        &Picture {
+            & img {
+                padding: 0;
+            }
+        }
     }
     main .presentation__content--skillsCtn {
         flex-direction: column;
