@@ -528,6 +528,78 @@ main {
                 }
             }
             
+            // Packages Part
+            &--packages {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 40px 0;
+                gap: 40px;
+                align-items: center;
+                justify-content: center;
+                color: lighten($primary-color, 15%);
+                &Title {
+                    font-size: 25px;
+                    text-align: center;
+                    color: $primary-color;
+                    & span {
+                        font-size: 17px;
+                        color: lighten($primary-color, 15%)
+                    }
+                }
+                &Ctn {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+                    width: 100%;
+                    &Package {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 10px;
+                        width: 33%;
+                        background-color: darken(#f3f4f5, 2%);
+                        box-shadow: 4px 3px 2px darken(#f3f4f5, 4%);
+                        padding: 15px;
+                        border-radius: 10px;
+                        color: $primary-color;
+                        text-align: center;
+                        &Header {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            justify-content: center;
+                            align-items: center;
+                            &Logo {
+                                font-family: $special-font;
+                                font-size: 24px;
+                            }
+                            &Text {
+                                font-size: 12px;
+                            }
+                        }
+                        &Title {
+                            text-align: center;
+                            height: 20px;
+                            width: 90%;
+                            font-size: 14px;
+                            border-radius: 40px;
+                            color: #f3f4f5;
+                        }
+                        &Title1 {
+                            background-color: $primary-color;
+                        }
+                        &Title2 {
+                            background: linear-gradient(90deg, $primary-color, #92d1c3)
+                        }
+                        &Title3 {
+                            background-color: $second-color;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
             
             // Contact Part
             &--contact {
@@ -544,7 +616,7 @@ main {
                     text-align: center;
                     color: $primary-color;
                     & span {
-                        font-size: 17px;
+                        font-size: 15px;
                         color: lighten($primary-color, 15%)
                     }
                 }
@@ -746,6 +818,16 @@ footer {
     }
 }
 
+@media (max-width: 1280px) {
+    main .presentation__content--packagesCtn {
+        flex-direction: column;
+        align-items: center;
+    }
+    main .presentation__content--packagesCtnPackage {
+        width: 60%;
+    }
+}
+
 @media (max-width: 1175px) {
     main .presentation__content--aboutContents {
         gap: 30px;
@@ -840,11 +922,16 @@ footer {
     main .presentation__content--guideContentLeftCtnTextP {
         padding-left: 3px;
     }
+    main .presentation__content--packagesCtnPackage {
+        width: 90%;
+    }
 }
 
 @media (max-width: 425px) {
     header .navbar {
-        width: 85%;
+        width: 90%;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     
     .img__wave1 {
