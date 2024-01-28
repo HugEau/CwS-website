@@ -929,4 +929,8 @@
 		 transform: scale(25%) translate(-80%, -70%);
 	}
 }
- 
+@media (min-width: 2100px) {
+    main .fade__wave {
+        height: 3%;
+    } 
+}
