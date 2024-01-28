@@ -14,19 +14,20 @@
 	 position: absolute;
 	 display: flex;
 	 justify-content: center;
+	 align-items: center;
 	 z-index: 10;
-	 width: 100%;
+	 height: 100%;
 }
  header .navbar {
 	 position: fixed;
 	 display: flex;
-	 flex-direction: row;
+	 flex-direction: column;
 	 align-items: center;
 	 justify-content: space-around;
 	 gap: 15px;
-	 bottom: 1em;
-	 width: 45%;
-	 height: 40px;
+	 left: 1em;
+	 height: 55%;
+	 width: 33px;
 	 background-color: #133854;
 	 box-shadow: 4px 3px 2px #103048;
 	 border-radius: 15px;
@@ -57,9 +58,40 @@
 }
  header .navbar__element:hover .navbar__element--name {
 	 display: block;
-	 top: -40px;
+	 left: 40px;
 }
  header .navbar__element a {
+	 color: inherit;
+	 text-decoration: none;
+}
+ header .navbarTiny {
+	 display: none;
+	 position: fixed;
+	 flex-direction: row;
+	 align-items: center;
+	 justify-content: space-around;
+	 gap: 15px;
+	 width: 100%;
+	 height: 3em;
+	 bottom: 0;
+	 background-color: #133854;
+	 box-shadow: 4px 3px 2px #103048;
+}
+ header .navbarTiny__element {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 color: #f3f4f5;
+	 width: 30px;
+	 height: 30px;
+	 gap: 5px;
+}
+ header .navbarTiny__element--name {
+	 font-size: 10px;
+	 text-align: center;
+}
+ header .navbarTiny__element a {
 	 color: inherit;
 	 text-decoration: none;
 }
@@ -566,7 +598,7 @@
  main .presentation__content--packagesFooter {
 	 color: #174365;
 	 font-size: 18px;
-     text-align: center;
+	 text-align: center;
 }
  main .presentation__content--contact {
 	 display: flex;
@@ -671,7 +703,7 @@
 }
  footer .footer__text {
 	 padding: 20px;
-	 padding-bottom: 62px;
+	 padding-bottom: 20px;
 	 display: flex;
 	 flex-direction: column;
 	 align-items: center;
@@ -754,9 +786,14 @@
  footer .footer__legals--modalTxtCtn p span {
 	 font-size: 16px;
 }
+ @media (min-width: 2100px) {
+	 main .fade__wave {
+		 height: 3%;
+	}
+}
  @media (min-width: 1300px) {
 	 main .fade__wave {
-		 bottom: 99.9%;
+		 bottom: 99.7%;
 	}
 }
  @media (max-width: 1280px) {
@@ -792,6 +829,16 @@
 	}
 }
  @media (max-width: 1024px) {
+	 header {
+		 height: 0%;
+		 width: 100%;
+	}
+	 header .navbar {
+		 display: none;
+	}
+	 header .navbarTiny {
+		 display: flex;
+	}
 	 main .presentation__content--portfolioWork {
 		 flex-direction: column;
 		 align-items: center;
@@ -805,14 +852,11 @@
 	 main .presentation__content--guideContentLeft {
 		 width: 80%;
 	}
+	 footer .footer__text {
+		 padding-bottom: 55px;
+	}
 }
  @media (max-width: 768px) {
-	 header .navbar {
-		 width: 75%;
-	}
-	 header .navbar__element:hover header .navbar__element--name {
-		 display: none;
-	}
 	 .img__waveRoll--1 {
 		 transform: scale(60%);
 	}
@@ -856,12 +900,12 @@
 		 width: 90%;
 	}
 }
- @media (max-width: 425px) {
-	 header .navbar {
-		 width: 90%;
-		 padding-right: 10px;
-		 padding-left: 10px;
+ @media (max-width: 530px) {
+	 header .navbarTiny__element--name {
+		 display: none;
 	}
+}
+ @media (max-width: 425px) {
 	 .img__wave1 {
 		 transform: scale(40%) translate(-30%);
 	}
@@ -929,8 +973,4 @@
 		 transform: scale(25%) translate(-80%, -70%);
 	}
 }
-@media (min-width: 2100px) {
-    main .fade__wave {
-        height: 3%;
-    } 
-}
+ 

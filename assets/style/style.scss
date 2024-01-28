@@ -29,18 +29,19 @@ header {
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
     z-index: 10;
-    width: 100%;
+    height: 100%;
     & .navbar {
         position: fixed;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-around;
         gap: 15px;
-        bottom: 1em;
-        width: 45%;
-        height: 40px;
+        left: 1em;
+        height: 55%;
+        width: 33px;
         background-color: darken($primary-color, 4%);
         box-shadow: 4px 3px 2px darken($primary-color, 7%);
         border-radius: 15px;
@@ -68,7 +69,7 @@ header {
                 border-radius: 50px;
                 & .navbar__element--name {
                     display: block;
-                    top: -40px;
+                    left: 40px;
                 }
             }
             & a {
@@ -76,6 +77,38 @@ header {
                 text-decoration: none;
             }
         }
+    }
+    & .navbarTiny {
+        display: none;
+        position: fixed;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 15px;
+        width: 100%;
+        height: 3em;
+        bottom: 0;
+        background-color: darken($primary-color, 4%);
+        box-shadow: 4px 3px 2px darken($primary-color, 7%);
+        &__element {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #f3f4f5;
+            width: 30px;
+            height: 30px;
+            gap: 5px;
+            &--name {
+                font-size: 10px;
+                text-align: center;
+            }
+            & a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+        
     }
 }
 
@@ -728,7 +761,7 @@ footer {
         }
         &__text {
             padding: 20px;
-            padding-bottom: 62px;
+            padding-bottom: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -864,6 +897,16 @@ footer {
 }
 
 @media (max-width: 1024px) {
+    header {
+        height: 0%;
+        width: 100%;
+    }
+    header .navbar {
+        display: none;
+    }
+    header .navbarTiny {
+        display: flex;
+    }
     main .presentation__content--portfolioWork {
         flex-direction: column;
         align-items: center;
@@ -877,19 +920,12 @@ footer {
     main .presentation__content--guideContentLeft {
         width: 80%;
     }
+    footer .footer__text {
+        padding-bottom: 55px;
+    }
 }
 
-@media (max-width: 768px) {
-    header .navbar {
-        width: 75%;
-    }
-    
-    header .navbar__element:hover {
-        & header .navbar__element--name {
-            display: none;
-        }
-    }
-    
+@media (max-width: 768px) {  
     .img__waveRoll--1 {
 		 transform: scale(60%);
 	}
@@ -937,14 +973,13 @@ footer {
         width: 90%;
     }
 }
+@media (max-width: 530px) {
+    header .navbarTiny__element--name {
+        display: none;
+    }
+}
 
 @media (max-width: 425px) {
-    header .navbar {
-        width: 90%;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
-    
     .img__wave1 {
 		 transform: scale(40%) translate(-30%);
 	}
