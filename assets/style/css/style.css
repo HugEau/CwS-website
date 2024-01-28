@@ -496,7 +496,7 @@
 	 display: flex;
 	 flex-direction: column;
 	 width: 100%;
-	 padding: 40px 0;
+	 padding: 40px 0 0 0;
 	 gap: 40px;
 	 align-items: center;
 	 justify-content: center;
@@ -562,6 +562,11 @@
  main .presentation__content--packagesCtnPackageTitle3 {
 	 background-color: #a2e8d8;
 	 color: #174365;
+}
+ main .presentation__content--packagesFooter {
+	 color: #174365;
+	 font-size: 18px;
+     text-align: center;
 }
  main .presentation__content--contact {
 	 display: flex;
@@ -854,8 +859,8 @@
  @media (max-width: 425px) {
 	 header .navbar {
 		 width: 90%;
-         padding-right: 10px;
-         padding-left: 10px;
+		 padding-right: 10px;
+		 padding-left: 10px;
 	}
 	 .img__wave1 {
 		 transform: scale(40%) translate(-30%);

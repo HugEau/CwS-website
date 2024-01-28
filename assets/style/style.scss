@@ -533,7 +533,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                padding: 40px 0;
+                padding: 40px 0 0 0;
                 gap: 40px;
                 align-items: center;
                 justify-content: center;
@@ -598,6 +598,11 @@ main {
                             color: $primary-color;
                         }
                     }
+                }
+                &Footer {
+                    color: $primary-color;
+                    font-size: 18px;
+                    text-align: center;
                 }
             }
             
