@@ -197,7 +197,7 @@
  main .fade__wave {
 	 position: absolute;
 	 width: 100%;
-	 bottom: 99.5%;
+	 bottom: 99.9%;
 }
  main .presentationCtn {
 	 width: 100%;
@@ -522,11 +522,11 @@
 	 flex-direction: column;
 	 align-items: center;
 	 justify-content: space-between;
-	 gap: 10px;
+	 gap: 15px;
 	 width: 33%;
 	 background-color: #edeff0;
 	 box-shadow: 4px 3px 2px #e8eaec;
-	 padding: 15px;
+	 padding: 20px;
 	 border-radius: 10px;
 	 color: #174365;
 	 text-align: center;
@@ -756,7 +756,7 @@
 }
  @media (min-width: 1300px) {
 	 main .fade__wave {
-		 bottom: 99.7%;
+		 bottom: 99.9%;
 	}
 }
  @media (max-width: 1280px) {

@@ -223,7 +223,7 @@ main {
         &__wave {
             position: absolute;
 	        width: 100%;
-            bottom: 99.5%
+            bottom: 99.9%
         }
     }
     // Presentation part
@@ -557,11 +557,11 @@ main {
                         flex-direction: column;
                         align-items: center;
                         justify-content: space-between;
-                        gap: 10px;
+                        gap: 15px;
                         width: 33%;
                         background-color: darken(#f3f4f5, 2%);
                         box-shadow: 4px 3px 2px darken(#f3f4f5, 4%);
-                        padding: 15px;
+                        padding: 20px;
                         border-radius: 10px;
                         color: $primary-color;
                         text-align: center;
