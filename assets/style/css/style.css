@@ -792,10 +792,7 @@
 		 height: 3%;
 	}
 }
- @media (min-width: 1300px) {
-	 main .fade__wave {
-		 bottom: 99.7%;
-	}
+
 }
  @media (max-width: 1280px) {
 	 main .presentation__content--packagesCtn {
