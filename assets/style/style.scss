@@ -698,6 +698,82 @@ main {
                             }
                         }
                     }
+                    &Emailing {
+                        width: 100%;
+                        & form {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 20px;
+                            width: 100%;
+                            & label {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 15px;
+                                width: 100%;
+                                & textarea, input[type="email"] {
+                                    color: lighten($primary-color, 15%);
+                                    font-family: $main-font;
+                                    border-radius: 10px;
+                                    border: none;
+                                    box-shadow: 3px 5px 3px darken(#f3f4f5, 5%);
+                                }
+                                & input[type="email"] {
+                                    width: 250px;
+                                    height: 20px;
+                                    padding: 5px;
+                                }
+                                & textarea {
+                                    resize: none;
+                                    width: 75%;
+                                    height: 200px;
+                                    overflow-y: scroll;
+                                    padding: 20px;
+                                }
+                            }
+                            & .emailingFormAccept {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 10px;
+                                padding: 15px;
+                                width: 75%;
+                                & p {
+                                    font-size: 12px;
+                                    & a {
+                                        color: inherit;
+                                    }
+                                }
+                            }
+                            & button {
+                                border: none;
+                                background-color: lighten($primary-color, 10%);
+                                color: #f3f4f5;
+                                box-shadow: 2px 3px 2px lighten($primary-color, 5%);
+                                border-radius: 5px;
+                                padding: 10px;
+                                text-align: center;
+                                &:hover {
+                                    cursor: pointer;
+                                    animation: sendEmailHover 0.5s;
+                                    @keyframes sendEmailHover {
+                                        0% {
+                                            padding: 10px;
+                                        }
+                                        50% {
+                                            padding-left: 12px;
+                                            padding-right: 12px;
+                                            background-color: lighten($primary-color, 25%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -916,8 +992,12 @@ footer {
         width: 80%;
     }
     footer .footer__text {
-        padding-bottom: 61px;
+		 font-size: 12px;
+         padding-bottom: 70px;
     }
+    footer .footer__text--nav a p {
+		 font-size: 12px;
+	}
 }
 
 @media (max-width: 768px) {  
@@ -966,6 +1046,9 @@ footer {
     }
     main .presentation__content--packagesCtnPackage {
         width: 90%;
+    }
+    footer .footer__wave {
+        height: auto;
     }
 }
 @media (max-width: 530px) {
@@ -1019,13 +1102,6 @@ footer {
 	 main .presentation__content--guideContentRightText {
 		 font-size: 14px;
     }
-    
-    footer .footer__text {
-		 font-size: 12px;
-     }
-    footer .footer__text--nav a p {
-		 font-size: 12px;
-	}
 }
  @media (max-width: 370px) {
 	 .img__wave1 {
